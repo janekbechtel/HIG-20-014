@@ -1,9 +1,10 @@
 for CHANNEL in tt mt et
+do
 for T_MASS in 500
 do
 for T_BATCH in 3 
 do
-LM=`python ml/get_typical_point.py ${T_MASS} ${T_BATCH}`
+LM=`python get_typical_point.py ${T_MASS} ${T_BATCH}`
 
 
 # RUN THESE COMMANDS ONLY TO RECREATE THE ERA-COMBINED ROOT FILES FROM POSTFITSHAPE ROOT FILES : 
@@ -85,26 +86,25 @@ echo $NAME
 echo $process
 
 if [ "$CAT" -eq 3 ]; then
-cp combine_${CHANNEL}_base_cat3.json combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-fi
+cp combine_${CHANNEL}_base_cat3.json plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
 else
-cp combine_${CHANNEL}_base.json combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+cp combine_${CHANNEL}_base.json plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
 fi
 
 
-sed -i "s#CAT#"${CAT}"#g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s#+TM+#"${T_MASS}"#g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s#+LM+#"${LM}"#g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s%+NAME+%${NAME}%g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s%+PROCESS+%${process}%g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s%+COLOR+%${color}%g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s%+MARKER+%${marker}%g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s%+LINEWIDTH+%${linewidth}%g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s%+NMSSM_SIGNAL+%${nmssm_signal}%g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s%+SIGCOLOR+%${sigcolor}%g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
-sed -i "s%+SIGLABEL+%${siglabel}%g" plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s#CAT#"${CAT}"#g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s#+TM+#"${T_MASS}"#g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s#+LM+#"${LM}"#g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s%+NAME+%${NAME}%g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s%+PROCESS+%${process}%g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s%+COLOR+%${color}%g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s%+MARKER+%${marker}%g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s%+LINEWIDTH+%${linewidth}%g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s%+NMSSM_SIGNAL+%${nmssm_signal}%g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s%+SIGCOLOR+%${sigcolor}%g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+sed -i "s%+SIGLABEL+%${siglabel}%g" plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
 
-higgsplot.py -j plots/prefit/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
+higgsplot.py -j plots/combine_${CHANNEL}_${CAT}_${T_MASS}_${T_BATCH}_${LM}.json
 
 done
 done
