@@ -261,7 +261,7 @@ legend.AddEntry(graph_m1,"68% expected","F")
 legend.AddEntry(graph_m2,"95% expected","F")
 legend.AddEntry(graph_excluded,"m_{h}+m_{h_{S}} > m_{H}","F")
 legend.Draw("SAME")
-plot.DrawCMSLogo(c1, 'CMS', "Preliminary", 3, 0.045, 0.035, 1.2, '', 0.6)
+plot.DrawCMSLogo(c1, 'CMS', "", 3, 0.045, 0.035, 1.2, '', 0.6)
 # plot.DrawTitle(c1,"               #splitline{95% CL exclusion on maximally allowed}{cross section times branching fractions in NMSSM}",1,0.3,0.35)
 plot.DrawTitle(c1, "#scale[0.8]{137 fb^{-1} (13 TeV)}", 3)
 
