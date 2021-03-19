@@ -1,0 +1,215 @@
+{
+    "add_nicks": [
+        "emb zll ttl vvl fakes htt"
+    ], 
+    "add_result_nicks": [
+        "background_uncertainty"
+    ], 
+    "analysis_modules": [
+        "NormalizeByBinWidth", 
+        "Ratio", 
+        "AddHistograms"
+    ], 
+    "line_widths": [
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        3, 
+        2, 
+        2, 
+        +LINEWIDTH+, 
+        +LINEWIDTH+, 
+        +LINEWIDTH+, 
+        2    ], 
+    "cms": true,
+    "extra_text": "Preliminary",
+    "colors": [
+        "emb", 
+        "zll", 
+        "ttl", 
+        "vvl", 
+        "fakes", 
+        "htt", 
+        "transgrey", 
+        "0", 
+        "data", 
+        "#B7B7B7", 
+        "#8FBC8F", 
+        "#6F2D35", 
+        "#4496C8", 
+        "#000000"
+    ], 
+    "comment": "plot_nmssm_nominal.py -v nnscore --era Run2018 -c et --emb --output-dir plots/test/postfit/+TM+/3 --ff --postfit --heavy-mass +TM+ --light-mass +LM+ --batch 3 --shapes CMSSW_10_2_16_UL/src/output_2018_et_+TM+_1_nmssm_+TM+_+LM+/2018/cmb/postfitshape.root", 
+    "energies": [
+        13
+    ], 
+    "filename": "combined_postfit_+TM+_+LM+_mt_CAT", 
+    "files": [
+        "newfile_+TM+_+LM+_postfit_mt_CAT.root"
+    ], 
+    "formats": [
+        "pdf", 
+        "png"
+    ], 
+    "nmssm_signal": +NMSSM_SIGNAL+,
+    "hide_progressbar": true, 
+    "labels": [
+        "emb", 
+        "zll", 
+        "ttl", 
+        "vvl", 
+        "fakes", 
+        "htt", 
+        "Bkg.unc.", 
+        "", 
+        "data", 
+        "", 
+        "", 
+        "", 
+        "", 
+        ""
+    ], 
+    "legend": [
+        0.4, 
+        0.53, 
+        0.78, 
+        0.83
+    ], 
+    "legend_cols": 2, 
+    "legend_fontsize": 0.05, 
+    "legend_markers": [
+        "F", 
+        "F", 
+        "F", 
+        "F", 
+        "F", 
+        "F", 
+        "F", 
+        "LX0", 
+        "ELP", 
+        "E2", 
+        "L", 
+        "L", 
+        "L", 
+        ""
+    ], 
+    "lumis": [
+        137
+    ], 
+    "markers": [
+        "HIST", 
+        "HIST", 
+        "HIST", 
+        "HIST", 
+        "HIST", 
+        "HIST", 
+        "E2", 
+        "LINE", 
+        "P", 
+        "E2", 
+        "+MARKER+", 
+        "+MARKER+", 
+        "+MARKER+", 
+        "P"
+    ], 
+    "nicks": [
+        "emb", 
+        "zll", 
+        "ttl", 
+        "vvl", 
+        "fakes", 
+        "htt", 
+        "nmssm_+TM+_125_+LM+", 
+        "data"
+    ], 
+    "nicks_blacklist": [
+        "noplot"
+    ], 
+    "ratio_denominator_nicks": [
+        "emb zll ttl vvl fakes htt", 
+        "emb zll ttl vvl fakes htt", 
+        "emb zll ttl vvl fakes htt", 
+        "emb zll ttl vvl fakes htt", 
+        "emb zll ttl vvl fakes htt"
+    ], 
+    "ratio_numerator_nicks": [
+        "emb zll ttl vvl fakes htt", 
+        "htt",
+        "vvl",
+        "zll", 
+        "data"
+    ], 
+    "ratio_result_nicks": [
+        "bkg_ratio", 
+        "purity_1", 
+        "purity_2", 
+        "purity_3", 
+        "data_ratio"
+    ], 
+    "scale_factors": [
+        1, 
+        1, 
+        1, 
+        1, 
+        1, 
+        1, 
+        2, 
+        1
+    ], 
+    "stacks": [
+        "mc", 
+        "mc", 
+        "mc", 
+        "mc", 
+        "mc", 
+        "mc", 
+        "nmssm_+TM+_125_+LM+", 
+        "bkg_unc", 
+        "data", 
+        "ratio_bkg", 
+        "purity",
+        "purity", 
+        "purity", 
+        "ratio_data"
+    ], 
+    "subplot_legend": [
+        0.7, 
+        0.73, 
+        0.9, 
+        0.98
+    ], 
+    "subplot_legend_fontsize": 0.15, 
+
+    "title": "#scale[0.9]{  #mu#tau_{h}: +NAME+}", 
+    "x_expressions": [
+        "EMB", 
+        "ZL", 
+        "TTL", 
+        "VVL", 
+        "jetFakes", 
+        "HTT", 
+        "NMSSM_+TM+_125_+LM+", 
+        "data_obs"
+    ], 
+    "x_label": "y_{+NAME+}", 
+    "x_lims": [
+        0.2, 
+        1.0
+    ], 
+    "x_log": false, 
+    "y_label": "#frac{#scale[0.85]{dN_{evts}}}{#scale[0.85]{y_{+NAME+}}}", 
+    "y_log": false, 
+    "y_rel_lims": [
+        0.0, 
+        1.5
+    ], 
+    "y_subplot_label": "#frac{#scale[0.85]{Observed}}{#scale[0.85]{Background}}", 
+    "y_subplot_lims": [
+        0.3, 
+        1.7
+    ]
+}
