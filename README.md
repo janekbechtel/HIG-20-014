@@ -9,7 +9,7 @@ cd HIG-20-014/
 source utils/init_cmssw.sh
 cd ../..
 # for continous limits:
-cp plotting_skips.py CMSSW_10_2_16_UL/src/CombineHarvester/CombineTools/python/plotting.py 
+cp plotting.py CMSSW_10_2_16_UL/src/CombineHarvester/CombineTools/python/plotting.py 
 # for limits with whitespaces between batches (style as in thesis and paper):
 cp plotting_skips.py CMSSW_10_2_16_UL/src/CombineHarvester/CombineTools/python/plotting.py 
 
